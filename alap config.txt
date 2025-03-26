@@ -1,0 +1,26 @@
+Rv4
+ena
+conf t
+hostname R1
+ip domain-name bot.hu
+no ip domain lookup
+enable secret cisco
+username admin password secret
+service password-encryption
+banner motd 'vigyazz hova mesz'
+line con 0
+password cisco
+login local
+logging synchronous
+exit
+line vty 0 15
+password cisco
+login local
+logging synchronous
+transport input ssh
+exit
+crypto key generate rsa 
+4096
+ip ssh version 2
+do copy run start
+exit
