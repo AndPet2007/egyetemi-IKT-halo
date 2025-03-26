@@ -1,0 +1,10 @@
+ipv6 unicast-routing
+ipv6 dhcp pool pool1
+address prefix 2001:db8:a:1::/64 lifetime infinite
+dns-server 2001:db8:a:a::5
+domain-name zold.and
+exit
+interface g0/0
+ipv6 address 2001:db8:a:1::1/64
+ipv6 dhcp server pool1
+ipv6 nd managed-config-flag
