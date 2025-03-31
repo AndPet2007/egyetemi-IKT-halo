@@ -1,0 +1,31 @@
+vlan 10
+name tanari
+exit
+int f0/1-6
+switchport mode access
+switchport access vlan 10
+exit
+vlan 20
+name eloado
+exit
+int range f0/7-11
+swi mod acc
+swi acc vlan 20
+exit
+vlan 30
+name ap
+exit
+int f0/12-15
+switchport mode access
+switchport access vlan 30
+exit
+
+
+int range f0/23-24
+switchport mode trunk
+
+interface range FastEthernet0/21-22
+2channel-group 1 mode active 
+interface port-channel 1
+switchport mode trunk
+switchport trunk allowed vlan 1,2,20
