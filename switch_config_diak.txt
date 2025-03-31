@@ -6,6 +6,15 @@ int range f0/1-20
 switch mode access
 switch access vlan 25
 exit
+int range f0/23-24
+switchport mode trunk
+exit
+interface range FastEthernet0/21-22
+2channel-group 1 mode active 
+interface port-channel 1
+switchport mode trunk
+switchport trunk allowed vlan 25
+exit
 
 vlan 30
 name 1/2
@@ -13,6 +22,16 @@ exit
 int range f0/1-20
 switch mode access
 switch access vlan 30
+exit
+
+int range f0/23-24
+switchport mode trunk
+exit
+interface range FastEthernet0/21-22
+2channel-group 1 mode active 
+interface port-channel 1
+switchport mode trunk
+switchport trunk allowed vlan 30
 exit
 
 vlan 35
@@ -23,56 +42,90 @@ switch mode access
 switch access vlan 35
 exit
 
-vlan 35
-name 1/4
+int range f0/23-24
+switchport mode trunk
 exit
-int range f0/1-20
-switch mode access
-switch access vlan 35
+interface range FastEthernet0/21-22
+2channel-group 1 mode active 
+interface port-channel 1
+switchport mode trunk
+switchport trunk allowed vlan 35
 exit
 
 vlan 40
-name 1/5
+name 1/4
 exit
 int range f0/1-20
 switch mode access
 switch access vlan 40
 exit
 
+int range f0/23-24
+switchport mode trunk
+exit
+interface range FastEthernet0/21-22
+2channel-group 1 mode active 
+interface port-channel 1
+switchport mode trunk
+switchport trunk allowed vlan 40
+exit
+
 vlan 45
-name 1/6
+name 1/5
 exit
 int range f0/1-20
 switch mode access
 switch access vlan 45
 exit
 
+int range f0/23-24
+switchport mode trunk
+exit
+interface range FastEthernet0/21-22
+2channel-group 1 mode active 
+interface port-channel 1
+switchport mode trunk
+switchport trunk allowed vlan 45
+exit
+
 vlan 50
-name 1/7
+name 1/6
 exit
 int range f0/1-20
 switch mode access
 switch access vlan 50
 exit
 
+int range f0/23-24
+switchport mode trunk
+exit
+interface range FastEthernet0/21-22
+2channel-group 1 mode active 
+interface port-channel 1
+switchport mode trunk
+switchport trunk allowed vlan 50
+exit
+
 vlan 55
-name 1/8
+name 1/7
 exit
 int range f0/1-20
 switch mode access
 switch access vlan 55
 exit
 
-vlan 60
-name 1/9
+int range f0/23-24
+switchport mode trunk
 exit
-int range f0/1-20
-switch mode access
-switch access vlan 60
+interface range FastEthernet0/21-22
+2channel-group 1 mode active 
+interface port-channel 1
+switchport mode trunk
+switchport trunk allowed vlan 55
 exit
 
 vlan 65
-name 1/10
+name 1/8
 exit
 int range f0/1-20
 switch mode access
@@ -81,13 +134,49 @@ exit
 
 int range f0/23-24
 switchport mode trunk
-
+exit
 interface range FastEthernet0/21-22
 2channel-group 1 mode active 
 interface port-channel 1
 switchport mode trunk
-switchport trunk allowed vlan 1,2,20
+switchport trunk allowed vlan 65
+exit
 
+vlan 70
+name 1/9
+exit
+int range f0/1-20
+switch mode access
+switch access vlan 70
+exit
+
+int range f0/23-24
+switchport mode trunk
+exit
+interface range FastEthernet0/21-22
+2channel-group 1 mode active 
+interface port-channel 1
+switchport mode trunk
+switchport trunk allowed vlan 70
+exit
+
+vlan 75
+name 1/10
+exit
+int range f0/1-20
+switch mode access
+switch access vlan 75
+exit
+
+int range f0/23-24
+switchport mode trunk
+exit
+interface range FastEthernet0/21-22
+2channel-group 1 mode active 
+interface port-channel 1
+switchport mode trunk
+switchport trunk allowed vlan 75
+exit
 
 
 
@@ -95,16 +184,9 @@ switchport trunk allowed vlan 1,2,20
 
 2. épület
 
-vlan 10
-name vlan 1/1
-exit
-int f0/1-20
-switchport mode access
-switchport access vlan 10
-exit
+
 int range f0/23-24
 switchport mode trunk
-
 interface range FastEthernet0/21-22
 2channel-group 1 mode active 
 interface port-channel 1
@@ -113,82 +195,182 @@ switchport trunk allowed vlan 10
 
 
 
-vlan 70
-name 2/1
-exit
-int range f0/1-20
-switch mode access
-switch access vlan 70
-exit
-
-vlan 75
-name 2/2
-exit
-int range f0/1-20
-switch mode access
-switch access vlan 75
-exit
-
 vlan 80
-name 2/3
+name 2/1
 exit
 int range f0/1-20
 switch mode access
 switch access vlan 80
 exit
 
+int range f0/23-24
+switchport mode trunk
+exit
+interface range FastEthernet0/21-22
+2channel-group 1 mode active 
+interface port-channel 1
+switchport mode trunk
+switchport trunk allowed vlan 80
+exit
+
 vlan 85
-name 2/4
+name 2/2
 exit
 int range f0/1-20
 switch mode access
 switch access vlan 85
 exit
 
+int range f0/23-24
+switchport mode trunk
+exit
+interface range FastEthernet0/21-22
+2channel-group 1 mode active 
+interface port-channel 1
+switchport mode trunk
+switchport trunk allowed vlan 85
+exit
+
 vlan 90
-name 2/5
+name 2/3
 exit
 int range f0/1-20
 switch mode access
 switch access vlan 90
 exit
 
+int range f0/23-24
+switchport mode trunk
+exit
+interface range FastEthernet0/21-22
+2channel-group 1 mode active 
+interface port-channel 1
+switchport mode trunk
+switchport trunk allowed vlan 90
+exit
+
+vlan 95
+name 2/4
+exit
+int range f0/1-20
+switch mode access
+switch access vlan 95
+exit
+
+int range f0/23-24
+switchport mode trunk
+exit
+interface range FastEthernet0/21-22
+2channel-group 1 mode active 
+interface port-channel 1
+switchport mode trunk
+switchport trunk allowed vlan 95
+exit
+
 vlan 100
-name 2/6
+name 2/5
 exit
 int range f0/1-20
 switch mode access
 switch access vlan 100
 exit
 
+int range f0/23-24
+switchport mode trunk
+exit
+interface range FastEthernet0/21-22
+2channel-group 1 mode active 
+interface port-channel 1
+switchport mode trunk
+switchport trunk allowed vlan 100
+exit
+
 vlan 105
-name 2/7
+name 2/6
 exit
 int range f0/1-20
 switch mode access
 switch access vlan 105
 exit
 
+int range f0/23-24
+switchport mode trunk
+exit
+interface range FastEthernet0/21-22
+2channel-group 1 mode active 
+interface port-channel 1
+switchport mode trunk
+switchport trunk allowed vlan 105
+exit
+
 vlan 110
-name 2/8
+name 2/7
 exit
 int range f0/1-20
 switch mode access
 switch access vlan 110
 exit
 
+int range f0/23-24
+switchport mode trunk
+exit
+interface range FastEthernet0/21-22
+2channel-group 1 mode active 
+interface port-channel 1
+switchport mode trunk
+switchport trunk allowed vlan 110
+exit
+
 vlan 115
-name 2/9
+name 2/8
 exit
 int range f0/1-20
 switch mode access
 switch access vlan 115
 exit
 
+int range f0/23-24
+switchport mode trunk
+exit
+interface range FastEthernet0/21-22
+2channel-group 1 mode active 
+interface port-channel 1
+switchport mode trunk
+switchport trunk allowed vlan 115
+exit
+
 vlan 120
-name 2/10
+name 2/9
 exit
 int range f0/1-20
 switch mode access
 switch access vlan 120
+exit
+
+int range f0/23-24
+switchport mode trunk
+exit
+interface range FastEthernet0/21-22
+2channel-group 1 mode active 
+interface port-channel 1
+switchport mode trunk
+switchport trunk allowed vlan 120
+exit
+
+vlan 125
+name 2/10
+exit
+int range f0/1-20
+switch mode access
+switch access vlan 125
+exit
+
+int range f0/23-24
+switchport mode trunk
+exit
+interface range FastEthernet0/21-22
+2channel-group 1 mode active 
+interface port-channel 1
+switchport mode trunk
+switchport trunk allowed vlan 125
 exit
