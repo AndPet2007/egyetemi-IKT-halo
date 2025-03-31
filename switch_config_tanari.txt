@@ -1,17 +1,25 @@
 vlan 10
 name tanari
 exit
-int f0/1-10
+int f0/1-6
 switchport mode access
 switchport access vlan 10
 exit
 vlan 20
 name eloado
 exit
-int range f0/11-20
+int range f0/7-11
 swi mod acc
 swi acc vlan 20
 exit
+vlan 30
+name ap
+exit
+int f0/12-15
+switchport mode access
+switchport access vlan 30
+exit
+
 
 int range f0/23-24
 switchport mode trunk
