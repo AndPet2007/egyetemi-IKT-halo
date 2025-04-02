@@ -1,7 +1,7 @@
 vlan 10
 name tanari
 exit
-int f0/1-6
+int range f0/1-6
 switchport mode access
 switchport access vlan 10
 exit
