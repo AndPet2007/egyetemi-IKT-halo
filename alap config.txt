@@ -25,6 +25,10 @@ crypto key generate rsa
 ip ssh version 2
 do copy run start
 exit
+int g0/0
+standby 1 ip 
+standby 1 priority 150
+standby 1 preempt
 
 Rv6
 
@@ -53,6 +57,10 @@ crypto key generate rsa
 ip ssh version 2
 do copy run start
 exit
+int g0/0
+standby 1 ip 
+standby 1 priority 150
+standby 1 preempt
 
 Switch config
 
@@ -80,4 +88,7 @@ crypto key generate rsa
 4096
 ip ssh version 2
 do copy run start
+exit
+vlan 999
+name NATIVE
 exit
