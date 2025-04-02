@@ -15,10 +15,12 @@ exit
 vlan 30
 name ap
 exit
-int f0/12-15
+int range f0/12-15
 switchport mode access
 switchport access vlan 30
 exit
+passive-interface range f0/16-20 
+
 
 
 int range f0/23-24
