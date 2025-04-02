@@ -23,9 +23,13 @@ exit
 
 int range f0/23-24
 switchport mode trunk
+switchport native vlan 999
+switchport trunk allowed vlan 10,20,30
 exit
 interface range FastEthernet0/21-22
 2channel-group 1 mode active 
 interface port-channel 1
 switchport mode trunk
+switchport native vlan 999
 switchport trunk allowed vlan 10,20,30
+exit

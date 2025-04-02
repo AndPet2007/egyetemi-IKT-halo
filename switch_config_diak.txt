@@ -1,4 +1,8 @@
 1. épület
+vlan 999
+name NATIVE
+exit
+
 vlan 25
 name 1/1
 exit
@@ -13,8 +17,10 @@ interface range FastEthernet0/21-22
 2channel-group 1 mode active 
 interface port-channel 1
 switchport mode trunk
+switchport native vlan 999
 switchport trunk allowed vlan 25
 exit
+
 
 vlan 30
 name 1/2
@@ -31,6 +37,7 @@ interface range FastEthernet0/21-22
 2channel-group 1 mode active 
 interface port-channel 1
 switchport mode trunk
+switchport native vlan 999
 switchport trunk allowed vlan 30
 exit
 
@@ -49,6 +56,7 @@ interface range FastEthernet0/21-22
 2channel-group 1 mode active 
 interface port-channel 1
 switchport mode trunk
+switchport native vlan 999
 switchport trunk allowed vlan 35
 exit
 
@@ -67,6 +75,7 @@ interface range FastEthernet0/21-22
 2channel-group 1 mode active 
 interface port-channel 1
 switchport mode trunk
+switchport native vlan 999
 switchport trunk allowed vlan 40
 exit
 
@@ -85,6 +94,7 @@ interface range FastEthernet0/21-22
 2channel-group 1 mode active 
 interface port-channel 1
 switchport mode trunk
+switchport native vlan 999
 switchport trunk allowed vlan 45
 exit
 
@@ -103,6 +113,7 @@ interface range FastEthernet0/21-22
 2channel-group 1 mode active 
 interface port-channel 1
 switchport mode trunk
+switchport native vlan 999
 switchport trunk allowed vlan 50
 exit
 
@@ -121,6 +132,7 @@ interface range FastEthernet0/21-22
 2channel-group 1 mode active 
 interface port-channel 1
 switchport mode trunk
+switchport native vlan 999
 switchport trunk allowed vlan 55
 exit
 
@@ -139,6 +151,7 @@ interface range FastEthernet0/21-22
 2channel-group 1 mode active 
 interface port-channel 1
 switchport mode trunk
+switchport native vlan 999
 switchport trunk allowed vlan 65
 exit
 
@@ -157,6 +170,7 @@ interface range FastEthernet0/21-22
 2channel-group 1 mode active 
 interface port-channel 1
 switchport mode trunk
+switchport native vlan 999
 switchport trunk allowed vlan 70
 exit
 
@@ -175,6 +189,7 @@ interface range FastEthernet0/21-22
 2channel-group 1 mode active 
 interface port-channel 1
 switchport mode trunk
+switchport native vlan 999
 switchport trunk allowed vlan 75
 exit
 
@@ -183,6 +198,10 @@ exit
 
 
 2. épület
+
+vlan 999
+name NATIVE
+exit
 
 
 vlan 80
@@ -200,6 +219,7 @@ interface range FastEthernet0/21-22
 2channel-group 1 mode active 
 interface port-channel 1
 switchport mode trunk
+switchport native vlan 999
 switchport trunk allowed vlan 80
 exit
 
@@ -218,6 +238,7 @@ interface range FastEthernet0/21-22
 2channel-group 1 mode active 
 interface port-channel 1
 switchport mode trunk
+switchport native vlan 999
 switchport trunk allowed vlan 85
 exit
 
@@ -236,6 +257,7 @@ interface range FastEthernet0/21-22
 2channel-group 1 mode active 
 interface port-channel 1
 switchport mode trunk
+switchport native vlan 999
 switchport trunk allowed vlan 90
 exit
 
@@ -254,6 +276,7 @@ interface range FastEthernet0/21-22
 2channel-group 1 mode active 
 interface port-channel 1
 switchport mode trunk
+switchport native vlan 999
 switchport trunk allowed vlan 95
 exit
 
@@ -272,6 +295,7 @@ interface range FastEthernet0/21-22
 2channel-group 1 mode active 
 interface port-channel 1
 switchport mode trunk
+switchport native vlan 999
 switchport trunk allowed vlan 100
 exit
 
@@ -290,6 +314,7 @@ interface range FastEthernet0/21-22
 2channel-group 1 mode active 
 interface port-channel 1
 switchport mode trunk
+switchport native vlan 999
 switchport trunk allowed vlan 105
 exit
 
@@ -308,6 +333,7 @@ interface range FastEthernet0/21-22
 2channel-group 1 mode active 
 interface port-channel 1
 switchport mode trunk
+switchport native vlan 999
 switchport trunk allowed vlan 110
 exit
 
@@ -326,6 +352,7 @@ interface range FastEthernet0/21-22
 2channel-group 1 mode active 
 interface port-channel 1
 switchport mode trunk
+switchport native vlan 999
 switchport trunk allowed vlan 115
 exit
 
@@ -344,6 +371,7 @@ interface range FastEthernet0/21-22
 2channel-group 1 mode active 
 interface port-channel 1
 switchport mode trunk
+switchport native vlan 999
 switchport trunk allowed vlan 120
 exit
 
@@ -362,5 +390,8 @@ interface range FastEthernet0/21-22
 2channel-group 1 mode active 
 interface port-channel 1
 switchport mode trunk
+switchport native vlan 999
 switchport trunk allowed vlan 125
 exit
+
+
