@@ -185,16 +185,6 @@ exit
 2. épület
 
 
-int range f0/23-24
-switchport mode trunk
-interface range FastEthernet0/21-22
-2channel-group 1 mode active 
-interface port-channel 1
-switchport mode trunk
-switchport trunk allowed vlan 10
-
-
-
 vlan 80
 name 2/1
 exit
