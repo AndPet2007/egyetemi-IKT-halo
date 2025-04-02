@@ -1,7 +1,7 @@
 vlan 10
 name tanari
 exit
-int range f0/1-6
+int f0/1-6
 switchport mode access
 switchport access vlan 10
 exit
@@ -15,22 +15,25 @@ exit
 vlan 30
 name ap
 exit
-int range f0/12-15
+int f0/12-15
 switchport mode access
 switchport access vlan 30
 exit
 
 
-
 int range f0/23-24
 switchport mode trunk
-switchport trunk native vlan 999
+switchport native vlan 999
 switchport trunk allowed vlan 10,20,30
 exit
 interface range FastEthernet0/21-22
-channel-group 1 mode active 
+2channel-group 1 mode active 
 interface port-channel 1
 switchport mode trunk
-switchport trunk native vlan 999
+switchport native vlan 999
 switchport trunk allowed vlan 10,20,30
 exit
+
+interface range f0/16-20
+channel-group 3 mode passive
+no shut
