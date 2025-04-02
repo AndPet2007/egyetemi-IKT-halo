@@ -1,18 +1,5 @@
-ip dhcp excluded-address
+ip dhcp excluded-address 192.168.1.1 192.168.1.30
 ip dhcp pool LAN-POOL-1
-network
-default-router
-exit
-ip dhcp excluded-address
-ip dhcp pool LAN-POOL-2
-network
-default-router
-exitip dhcp excluded-address
-ip dhcp pool LAN-POOL-3
-network
-default-router
-exitip dhcp excluded-address
-ip dhcp pool LAN-POOL-4
-network
-default-router
+network 192.168.1.0
+default-router 192.168.1.1
 exit
