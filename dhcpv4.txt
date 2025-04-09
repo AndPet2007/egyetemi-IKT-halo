@@ -1,8 +1,8 @@
-ip dhcp excluded-address 192.168.1.1 192.168.2.68 
-ip dhcp excluded-address 192.168.10.254
+ip dhcp excluded-address 192.168.1.1 192.168.1.68 
+ip dhcp excluded-address 192.168.1.254
 ip dhcp pool LAN-POOL-1
 network 192.168.1.0 255.255.255.0
 default-router 192.168.1.1
 dns-server 192.168.2.5
-domain-name zold.hu
-end
+domain-name bot.hu
+exit
